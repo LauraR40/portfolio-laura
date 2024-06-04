@@ -64,6 +64,7 @@
 
     position: sticky;
     top: 0.5vh;
+    z-index: 50;
   }
 
   .logo {
