@@ -69,7 +69,7 @@
           <ProjectCard
             title={project.title}
             description={project.description}
-            link={"/portfolio/" + project.link}
+            link={"/portfolio" + project.link}
           />
         {/each}
       </div>
