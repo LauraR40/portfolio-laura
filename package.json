@@ -1,0 +1,41 @@
+{
+    "name": "portfolio",
+    "author": {
+        "name": "Laura Rocheteau",
+        "email": "email@example.com"
+    },
+    "description": "Un simple portfolio pour montrer mes projets et mes compétences.",
+    "keywords": [
+        "portfolio",
+        "website",
+        "projects",
+        "skills"
+    ],
+    "homepage": "https://example.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/[pseudo]/portfolio"
+    },
+    "license": "MIT",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "dev": "vite dev",
+        "net": "vite dev --host",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-auto": "^3.0.0",
+        "@sveltejs/kit": "^2.0.0",
+        "@sveltejs/vite-plugin-svelte": "^3.0.0",
+        "svelte": "^4.2.7",
+        "vite": "^5.0.3",
+        "vite-plugin-mkcert": "^1.17.5"
+    },
+    "type": "module",
+    "dependencies": {
+        "@macfja/svelte-persistent-store": "^2.4.1",
+        "@supabase/supabase-js": "^2.42.5"
+    }
+}
