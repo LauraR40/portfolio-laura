@@ -59,3 +59,12 @@ html {
     color: var(--text-color);
     font-family: var(--default-font);
 }
+
+body,
+#app {
+    position: relative;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
