@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Lexend Exa';
+    src: url("/fonts/LexendExa.ttf");
+}
+
+@font-face {
+    font-family: "InriaSans";
+    src: url("/fonts/Inria/InriaSans-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "InriaSans";
+    src: url("/fonts/Inria/InriaSans-Italic.ttf");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "InriaSans";
+    src: url("/fonts/Inria/InriaSans-Bold.ttf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "InriaSans";
+    src: url("/fonts/Inria/InriaSans-BoldItalic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "InriaSans";
+    src: url("/fonts/Inria/InriaSans-Light.ttf");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "InriaSans";
+    src: url("/fonts/Inria/InriaSans-LightItalic.ttf");
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+:root {
+    --bg-color: #191628;
+    --default-font: 'Lexend Exa', 'Roboto', sans-serif;
+    --title-font: 'InriaSans', 'Arial', sans-serif;
+    --text-color: #E5E5E5;
+    --primary-color: #FF0088;
+}
+
+html {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--default-font);
+}
