@@ -8,7 +8,9 @@
       "/images/illustrations/Illustration0.png",
       "/images/illustrations/Illustration2.png",
     ],
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    text: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    ],
   };
 
   const MMI = {
