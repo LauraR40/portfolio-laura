@@ -1,5 +1,8 @@
-<p>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod suscipit
-  corporis porro totam doloribus iusto reiciendis incidunt veniam iste adipisci
-  qui doloremque fugiat accusamus, odit eum repudiandae illum aut voluptates?
-</p>
+<script>
+  import CV from "$components/CV.svelte";
+  import Default from "$components/portfolio/categories/tabs/Default.svelte";
+</script>
+
+<Default />
+
+<CV />
