@@ -11,26 +11,41 @@
   ];
 
   let current = writable(0);
+  let lastAction = writable(Date.now());
+
+  function newAction() {
+    lastAction.set(Date.now());
+  }
 
   function next() {
     current.update((n) => (n + 1) % illustrations.length);
+    newAction();
   }
 
   function prev() {
     current.update(
       (n) => (n - 1 + illustrations.length) % illustrations.length
     );
+    newAction();
   }
 
   function goTo(index) {
     current.set(index);
+    newAction();
   }
 
   onMount(() => {
-    const interval = setInterval(next, 5000); // auto slide every 5 seconds
+    const interval = setInterval(() => {
+      if (Date.now() - $lastAction < 5000) return; // auto slide every 5 seconds
+      next();
+    }, 500);
     return () => clearInterval(interval); // cleanup interval on destroy
   });
 </script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-missing-attribute -->
 
 <section class="illustrations">
   <h2>Mes illustrations</h2>
@@ -123,7 +138,7 @@
     flex: 0 0 20%;
     position: relative;
     opacity: 0.5;
-    transform: scale(0.8);
+    transform: scale(0.7);
     transition:
       transform 0.5s ease-in-out,
       opacity 0.5s ease-in-out;
@@ -142,7 +157,6 @@
   .carousel-item.prev,
   .carousel-item.next {
     opacity: 0.7;
-    transform: scale(0.7);
   }
 
   .carousel-item.prev2,
@@ -173,8 +187,9 @@
   }
 
   .dots a {
-    width: 10px;
-    height: 10px;
+    --size: 12px;
+    width: var(--size);
+    height: var(--size);
     background: var(--primary-color);
     border-radius: 50%;
     margin: 0 5px;
