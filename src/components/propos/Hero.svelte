@@ -1,3 +1,10 @@
+<script>
+  import downloadFile from "$components/download.js";
+</script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-missing-attribute -->
 <section class="row">
   <div class="texte">
     <p>
@@ -7,7 +14,12 @@
     </p>
     <p>Je suis également passionnée par les jeux de toutes sortes.</p>
     <h1>J’aime vivre de nouvelles expériences.</h1>
-    <a href="#">Jeter un coup d’œil à mon cv &rightarrow;</a>
+
+    <a
+      on:click={() => {
+        downloadFile("cv.pdf");
+      }}>Jeter un coup d’œil à mon cv &rightarrow;</a
+    >
   </div>
   <div class="img">
     <img src="/images/photo_laura.png" alt="PhotoLaura" />
@@ -48,6 +60,7 @@
     color: var(--primary-color);
     text-decoration: none;
     font-size: 1.2rem;
+    cursor: pointer;
   }
 
   .img {

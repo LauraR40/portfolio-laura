@@ -1,13 +1,24 @@
 <script>
-  export let downloadLink = "#";
+  import downloadFile from "./download.js";
 </script>
+
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-missing-attribute -->
 
 <div class="cv-section">
   <div class="text-content">
     <h1>CV développeuse mobile flutter</h1>
     <p>Besoin d’en savoir plus sur mon parcours, télécharge mon CV en ligne.</p>
   </div>
-  <a href={downloadLink} class="download-button">
+
+  <a
+    on:click={() => {
+      downloadFile("cv.pdf");
+    }}
+    class="download-button"
+    target="_blank"
+  >
     <span class="icon">
       <img src="/icons/file_save.svg" alt="download" />
     </span>
