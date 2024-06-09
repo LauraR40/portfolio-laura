@@ -2,6 +2,11 @@
   import { writable } from "svelte/store";
   import portfolio from "../data.js";
 
+  import Category from "./Category.svelte";
+  import Categories from "./Categories.svelte";
+  import Projects from "./Projects.svelte";
+  import Venir from "./Venir.svelte";
+
   const { projects, projectTypes } = portfolio;
 
   let tabIndex = writable(-1);
@@ -56,53 +61,16 @@
     </div>
     <hr />
     {#if $tabIndex === -1}
-      <div class="categories">
-        {#each Object.keys(projects) as name}
-          <div
-            class="category-wrapper"
-            on:click={() => {
-              goToCat(name);
-            }}
-          >
-            <div class="category"></div>
-            <span>{name}</span>
-          </div>
-        {/each}
-      </div>
+      <Categories {projects} {goToCat} />
     {:else if $tabIndex == 0}
-      <div class="catego-projets">
-        <h3>{$currentCatego}</h3>
-        {#each projects[$currentCatego] as projet}
-          <hr />
-          <div class="proj">
-            <img src={projet.imgUrl} alt={projet.id} />
-            <span>{projet.date}</span>
-            <span>{projet.desc}</span>
-            <a href={"/portfolio/" + projet.id}>Plus</a>
-          </div>
-          <hr />
-        {/each}
-      </div>
+      <Category
+        projects={projects[$currentCatego]}
+        currentCatego={$currentCatego}
+      />
     {:else if $tabIndex == 1}
-      <div class="wrapper-explo">
-        <div class="wrapper-catego">
-          {#each projectTypes as proj}
-            <div>
-              {proj}
-            </div>
-          {/each}
-        </div>
-        <div class="wrapper-proj">
-          {#each Object.values(projects) as projs}
-            {#each projs as proj}
-              <div>
-                <img src={proj.imgUrl} alt={proj.id} />
-                <span>{proj.id}</span>
-              </div>
-            {/each}
-          {/each}
-        </div>
-      </div>
+      <Projects {projectTypes} {projects} />
+    {:else if $tabIndex == 2}
+      <Venir />
     {/if}
   </div>
 </section>
@@ -162,88 +130,5 @@
   .tabs span.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
-  }
-
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: center;
-    padding: 2rem 0;
-  }
-
-  .category-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1em;
-    color: var(--bg-color);
-  }
-
-  .category {
-    width: 150px;
-    height: 150px;
-    background-color: #e0e0e0;
-    border: 4px solid #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-
-  .category-wrapper span {
-    font-size: 1rem;
-    font-family: var(--default-font);
-  }
-
-  .proj {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    text-align: center;
-
-    color: var(--bg-color);
-    margin: 2em 0;
-  }
-
-  .catego-projets {
-    padding: 2em;
-  }
-
-  .catego-projets h3 {
-    color: var(--primary-color);
-    font-family: var(--title-font);
-    margin: 1em 0;
-    text-transform: uppercase;
-  }
-  .catego-projets hr {
-    margin: 1em 0;
-  }
-
-  .wrapper-catego {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    padding: 0 2rem;
-  }
-
-  .wrapper-catego div {
-    height: 15vh;
-    background-color: #7f7f7f;
-    border-radius: 8px;
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-  }
-
-  .wrapper-proj {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 </style>
