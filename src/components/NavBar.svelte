@@ -54,16 +54,14 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-
     background: rgba(25, 22, 40, 0.9);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
     position: sticky;
-    top: 0.5vh;
+    top: 0.4vh;
     z-index: 50;
   }
 
