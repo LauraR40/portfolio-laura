@@ -4,8 +4,8 @@
     Zoom sur mon passif en dévellopement
   </h4>
 </div>
-<div class="content-graph mx-auto">
-  <div class="graph flex">
+<div class="">
+  <div class="graph grid">
     <div class="componment">
       <h2 class="title-graph">Intégration web</h2>
       <div class="flex sous-comp">
@@ -57,7 +57,7 @@
   </div>
 
   <hr class="separ-bas mx-auto" />
-  <div class="flex graph" style="padding-bottom: 1rem; margin-bottom: 1rem;">
+  <div class="grid graph" style="padding-bottom: 1rem; margin-bottom: 1rem;">
     <div class="componment">
       <div class="point-dessus">
         <div class="pts-rose-body mx-auto">
@@ -132,7 +132,7 @@
   </div>
 
   <hr class="separ-bas mx-auto" />
-  <div class="flex graph" style="padding-bottom: 1rem; margin-bottom: 1rem;">
+  <div class="grid graph" style="padding-bottom: 1rem; margin-bottom: 1rem;">
     <div class="componment">
       <div class="point-dessus">
         <div class="pts-rose-body mx-auto">
@@ -215,7 +215,7 @@
   </div>
 
   <hr class="separ-bas mx-auto" />
-  <div class="flex graph" style="padding-bottom: 1rem; margin-bottom: 1rem;">
+  <div class="grid graph" style="padding-bottom: 1rem; margin-bottom: 1rem;">
     <div class="componment">
       <div class="point-dessus">
         <div class="pts-rose-body mx-auto">
@@ -291,34 +291,33 @@
       </div>
     </div>
   </div>
-
-  <div class="bas-graph mx-auto">
-    <h2 class="title-graph">Content Management System</h2>
-    <div class="flex sous-comp mx-auto" style="width: 50%;">
-      <div class="elem-3">
-        <img
-          class="logo mx-auto"
-          src="/images/graphImages/wordpress.png"
-          alt="Java script"
-        />
-        <h3 class="font-secondary">Wordpress</h3>
-      </div>
-      <div class="elem-3-mi">
-        <img
-          class="logo mx-auto"
-          src="/images/graphImages/5968753.png"
-          alt="second compétence"
-        />
-        <h3 class="font-secondary">Wix</h3>
-      </div>
-      <div class="elem-3">
-        <img
-          class="logo mx-auto"
-          src="/images/graphImages/prestashop-creanico.png"
-          alt="Java script"
-        />
-        <h3 class="font-secondary">Prestashop</h3>
-      </div>
+</div>
+<div class="bas-graph mx-auto">
+  <h2 class="title-graph">Content Management System</h2>
+  <div class="flex sous-comp mx-auto" style="width: 50%;">
+    <div class="elem-3">
+      <img
+        class="logo mx-auto"
+        src="/images/graphImages/wordpress.png"
+        alt="Java script"
+      />
+      <h3 class="font-secondary">Wordpress</h3>
+    </div>
+    <div class="elem-3-mi">
+      <img
+        class="logo mx-auto"
+        src="/images/graphImages/5968753.png"
+        alt="second compétence"
+      />
+      <h3 class="font-secondary">Wix</h3>
+    </div>
+    <div class="elem-3">
+      <img
+        class="logo mx-auto"
+        src="/images/graphImages/prestashop-creanico.png"
+        alt="Java script"
+      />
+      <h3 class="font-secondary">Prestashop</h3>
     </div>
   </div>
 </div>
@@ -348,7 +347,7 @@
   }
 
   .componment {
-    width: 50%;
+    width: 100%;
   }
 
   .sous-comp {
@@ -421,12 +420,7 @@
   }
 
   .pts-haut {
-    width: 16%;
     margin-top: -1rem;
-  }
-
-  .pts-haut2 {
-    width: 16%;
   }
 
   .barre-hori {
@@ -444,7 +438,7 @@
 
   .separ-bas {
     border: 0 solid #edf2f7;
-    width: 58.333333%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     border-top-width: 1px;
@@ -516,12 +510,6 @@
     color: #cbd5e0;
   }
 
-  .content-graph {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    max-width: 75vw;
-  }
-
   .font-secondary {
     font-weight: 700;
     text-transform: uppercase;
@@ -529,5 +517,22 @@
     text-align: center;
     color: #a0aec0;
     font-size: 0.875rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 45vw 10vw 45vw;
+    justify-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .font-secondary {
+      font-size: 0.5rem;
+    }
   }
 </style>
