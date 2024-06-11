@@ -14,7 +14,7 @@
 
   <a
     on:click={() => {
-      downloadFile("cv.pdf");
+      downloadFile("CV_Laura_Rocheteau_web.pdf");
     }}
     class="download-button"
     target="_blank"
