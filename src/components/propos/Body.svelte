@@ -18,9 +18,9 @@
   </div>
 
   <div class="imgs">
-    <img src={imgs[0]} alt="" class="big" />
-    <img src={imgs[1]} alt="" class="small" />
-    <img src={imgs[2]} alt="" class="small" />
+    <img src={imgs[0]} alt="une grande illustration" class="big" />
+    <img src={imgs[1]} alt="une ilustration moyenne" class="small" />
+    <img src={imgs[2]} alt="une autre illustration moyenne" class="small" />
   </div>
 </div>
 

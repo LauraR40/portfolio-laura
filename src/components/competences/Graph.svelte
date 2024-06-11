@@ -71,7 +71,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/Vue.png"
-            alt="Java script"
+            alt="Vue"
           />
           <h3 class="font-secondary">Vue</h3>
         </div>
@@ -79,7 +79,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/Svelte.png"
-            alt="second compétence"
+            alt="Svelte"
           />
           <h3 class="font-secondary">Svelte</h3>
         </div>
@@ -87,7 +87,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/React-icon.png"
-            alt="Java script"
+            alt="React"
           />
           <h3 class="font-secondary">React</h3>
         </div>
@@ -115,7 +115,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/DaVinci_Resolve_Studio.png"
-            alt="first compétence"
+            alt="Da vincci Resolve"
           />
           <h3 class="font-secondary">Da Vincci Resolve</h3>
         </div>
@@ -123,7 +123,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/after.png"
-            alt="second compétence"
+            alt="After effect"
           />
           <h3 class="font-secondary">After Effect</h3>
         </div>
@@ -154,7 +154,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/Logo_C_sharp.svg.png"
-            alt="second compétence"
+            alt="C#"
           />
           <h3 class="font-secondary">C#</h3>
         </div>
@@ -162,7 +162,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/java-logo-vector-1.svg"
-            alt="Java script"
+            alt="Java"
           />
           <h3 class="font-secondary">Java</h3>
         </div>
@@ -190,7 +190,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/LinkedIn_logo_initials.png"
-            alt="first compétence"
+            alt="Linkedin"
           />
           <h3 class="font-secondary">Linkedin</h3>
         </div>
@@ -198,7 +198,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/Instagram_icon.png.webp"
-            alt="second compétence"
+            alt="Instagram"
           />
           <h3 class="font-secondary">Instgram</h3>
         </div>
@@ -206,7 +206,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/tiktok-icon-free-png.webp"
-            alt="first compétence"
+            alt="Tik tok"
           />
           <h3 class="font-secondary">Tik tok</h3>
         </div>
@@ -229,7 +229,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/tree.png"
-            alt="Java script"
+            alt="Tree jS"
           />
           <h3 class="font-secondary">Tree js</h3>
         </div>
@@ -237,7 +237,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/melt.png"
-            alt="second compétence"
+            alt="melt UI"
           />
           <h3 class="font-secondary">Melt ui</h3>
         </div>
@@ -245,7 +245,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/Bootstrap_logo.svg"
-            alt="Java script"
+            alt="Bootstrap"
           />
           <h3 class="font-secondary">Bootstrap</h3>
         </div>
@@ -276,7 +276,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/Blender_logo_no_text.svg.png"
-            alt="first compétence"
+            alt="Blender"
           />
           <h3 class="font-secondary">Blender</h3>
         </div>
@@ -284,7 +284,7 @@
           <img
             class="logo mx-auto"
             src="/images/graphImages/unity-game-engine-icon.webp"
-            alt="second compétence"
+            alt="unity"
           />
           <h3 class="font-secondary">Unity</h3>
         </div>
@@ -299,7 +299,7 @@
         <img
           class="logo mx-auto"
           src="/images/graphImages/wordpress.png"
-          alt="Java script"
+          alt="wordpress"
         />
         <h3 class="font-secondary">Wordpress</h3>
       </div>
@@ -307,7 +307,7 @@
         <img
           class="logo mx-auto"
           src="/images/graphImages/5968753.png"
-          alt="second compétence"
+          alt="wix"
         />
         <h3 class="font-secondary">Wix</h3>
       </div>
@@ -315,7 +315,7 @@
         <img
           class="logo mx-auto"
           src="/images/graphImages/prestashop-creanico.png"
-          alt="Java script"
+          alt="prestashop"
         />
         <h3 class="font-secondary">Prestashop</h3>
       </div>
