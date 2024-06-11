@@ -1,3 +1,10 @@
+<div style="width: 100%; height: 20vh; text-align: center; margin-top: 10vh;">
+  <h2 class="mx-auto">Arbre de compétences</h2>
+  <h4 class="mx-auto" style="font-weight: 200;">
+    Zoom sur mon passif en dévellopement
+  </h4>
+</div>
+
 <div class="content-graph mx-auto">
   <div class="graph flex">
     <div class="componment">
