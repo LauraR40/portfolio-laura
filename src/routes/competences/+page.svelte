@@ -1,6 +1,7 @@
 <script>
   import CV from "$components/CV.svelte";
   import SkillTree from "$components/competences/SkillTree.svelte";
+  import Graph from "$components/competences/Graph.svelte";
 
   let categories = [
     {
@@ -51,5 +52,6 @@
   ];
 </script>
 
-<SkillTree {categories} />
+<!-- <SkillTree {categories} /> -->
+<Graph />
 <CV />

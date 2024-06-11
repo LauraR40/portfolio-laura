@@ -2,6 +2,4 @@
   export let data;
 </script>
 
-<div>
-  <span>{data.id}</span>
-</div>
+<svelte:component this={data.component} />

@@ -35,7 +35,7 @@
   </div>
   <hr />
   <div class="footer-bottom">
-    <p>&copy; 2024 développé avec ❤️ by Iziram</p>
+    <p>&copy; 2024 développé avec ❤️ by LauraR40</p>
     <p>Stack utilisé : SvelteKit et Vite</p>
   </div>
 </footer>
