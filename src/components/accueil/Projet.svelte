@@ -3,23 +3,23 @@
 
   const projects = [
     {
-      title: "Project 1",
-      description: "Un petit texte de qualité avec du détail et un lien.",
+      title: "Stratégie de communication",
+      description: "Mise en place des réseaux sociaux d'une association.",
       link: "/project1",
     },
     {
-      title: "Project 2",
-      description: "Un petit texte de qualité avec du détail et un lien.",
+      title: "Video ENSSAT",
+      description: "Introduire une nouvelle formation en photonique.",
       link: "/project2",
     },
     {
-      title: "Project 3",
-      description: "Un petit texte de qualité avec du détail et un lien.",
+      title: "Logo HOBUR",
+      description: "Création d'un logo de marque de luxe.",
       link: "/project3",
     },
     {
-      title: "Project 4",
-      description: "Un petit texte de qualité avec du détail et un lien.",
+      title: "Site web CMQe",
+      description: "Réalisation et mise en place d'un site web.",
       link: "/project4",
     },
   ];
