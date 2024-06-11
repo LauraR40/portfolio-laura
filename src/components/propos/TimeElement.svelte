@@ -117,7 +117,7 @@
 
   .content {
     margin-left: 1rem;
-    display: flex;
+    display: block;
     flex-direction: row;
     align-items: center;
     gap: 4px;
@@ -155,9 +155,6 @@
   @media (max-width: 768px) {
     .time-element.active {
       height: 50vh;
-    }
-    .content {
-      display: block;
     }
 
     .body {
