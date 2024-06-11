@@ -40,7 +40,7 @@ const projects = {
     ],
   },
   Communication: {
-    imgUrl: "#",
+    imgUrl: "/images/timeElements/tournage-audiovisuel-preparer-concours.jpg",
     projs: [
       {
         imgUrl: "",
