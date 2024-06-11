@@ -2,6 +2,7 @@
   import CV from "$components/CV.svelte";
   import SkillTree from "$components/competences/SkillTree.svelte";
   import Graph from "$components/competences/Graph.svelte";
+  import CVUpload from "$components/competences/CVUpload.svelte";
 
   let categories = [
     {
@@ -53,5 +54,6 @@
 </script>
 
 <!-- <SkillTree {categories} /> -->
+<CVUpload />
 <Graph />
 <CV />
