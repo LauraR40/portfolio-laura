@@ -24,10 +24,28 @@
   </div>
   <div class="footer-section">
     <h3>Réseaux</h3>
-    <p><a href="https://linkedin.com">Linkedin</a></p>
-    <p><a href="https://github.com">GitHub</a></p>
-    <p><a href="https://instagram.com">Instagram</a></p>
-    <p><a href="https://behance.com">Behance</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/lroc/" target="_blank">
+        <img src="/icons/linkedin.svg" alt="logo linkedin" />
+        Linkedin</a
+      >
+    </p>
+    <p>
+      <a href="https://github.com/LauraR40" target="_blank"
+        ><img src="/icons/github.svg" alt="logo github" />GitHub</a
+      >
+    </p>
+    <p>
+      <a href="https://www.instagram.com/mon_dys_et_moi/" target="_blank">
+        <img src="/icons/instagram.svg" alt="logo insta" />
+        Instagram</a
+      >
+    </p>
+    <p>
+      <a href="https://www.behance.net/laulierock" target="_blank"
+        ><img src="/icons/behance.svg" alt="logo behance" />Behance</a
+      >
+    </p>
   </div>
   <hr />
   <div class="footer-bottom">
@@ -69,6 +87,13 @@
     color: var(--text-color);
     text-decoration: none;
     line-height: 1.5;
+  }
+
+  .footer-section p a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
   }
 
   .footer-section a:hover {

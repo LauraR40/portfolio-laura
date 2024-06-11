@@ -76,4 +76,34 @@
   .download-button:hover {
     background-color: #e5006a;
   }
+
+  @media (max-width: 768px) {
+    .cv-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .text-content {
+      max-width: 100%;
+    }
+
+    .text-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .text-content p {
+      font-size: 1rem;
+    }
+
+    .download-button {
+      margin-top: 1rem;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .download-button .icon {
+      margin-right: 0.5rem;
+    }
+  }
 </style>

@@ -136,6 +136,7 @@
         content={element.content}
         goto={goTo}
         {index}
+        lastIndex={timelineElements.length - 1}
       />
     {/each}
   </div>

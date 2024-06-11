@@ -5,6 +5,7 @@
   export let content;
   export let goto;
   export let index;
+  export let lastIndex;
 
   import Body from "./Body.svelte";
 </script>
@@ -15,8 +16,7 @@
 <div class="time-element {active ? 'active' : ''}">
   <div class="indicator" on:click={goto(index)}>
     <div class="circle {active ? 'active' : ''}"></div>
-    <div class="line"></div>
-    <div class="circle" style="margin-top: 100px; position: absolute;"></div>
+    <div class="line {lastIndex == index ? 'last' : ''}"></div>
   </div>
   <div class="content" on:click={goto(index)}>
     <h3>{title}</h3>
@@ -101,10 +101,23 @@
     margin-top: -5px;
     height: 100%;
   }
+  .line.last::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #aaa;
+    transform: translate(-50%, 50%);
+    transition: all 0.5s;
+    border-radius: 50%;
+  }
 
   .content {
     margin-left: 1rem;
-    display: flex;
+    display: block;
     flex-direction: row;
     align-items: center;
     gap: 4px;
@@ -137,5 +150,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    .time-element.active {
+      height: 50vh;
+    }
+
+    .body {
+      height: 75%;
+      overflow-y: scroll;
+    }
   }
 </style>

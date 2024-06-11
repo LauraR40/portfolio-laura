@@ -72,6 +72,37 @@
         >Contact</a
       >
     </li>
+    <!-- Réseaux sociaux -->
+    <li class="socials">
+      <a
+        href="https://www.instagram.com/mon_dys_et_moi/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/icons/instagram.svg" alt="logo insta" />
+      </a>
+      <a
+        href="https://github.com/LauraR40"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/icons/github.svg" alt="logo github" />
+      </a>
+      <a
+        href="https://www.behance.net/laulierock"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/icons/behance.svg" alt="logo behance" />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/lroc/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/icons/linkedin.svg" alt="logo linkedin" />
+      </a>
+    </li>
   </ul>
 </nav>
 

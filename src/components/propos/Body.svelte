@@ -18,9 +18,8 @@
   </div>
 
   <div class="imgs">
-    <img src={imgs[0]} alt="une grande illustration" class="big" />
-    <img src={imgs[1]} alt="une ilustration moyenne" class="small" />
-    <img src={imgs[2]} alt="une autre illustration moyenne" class="small" />
+    <img src={imgs[0]} alt="illustration de gauche" class="small" />
+    <img src={imgs[1]} alt="illustration de droite" class="small" />
   </div>
 </div>
 
@@ -42,7 +41,6 @@
     display: grid;
     gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     height: 100%;
   }
 
@@ -55,15 +53,26 @@
     border: 5px solid var(--text-color);
   }
 
-  .big {
-    height: 40% !important;
-    display: grid;
-    grid-column: 1 / span 2;
-  }
-
   .small {
     display: grid;
-    /* grid: 1 / span 1; */
-    grid-row: 1;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .texte {
+      width: 100%;
+    }
+
+    .imgs {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    .imgs img {
+      height: 70%;
+    }
   }
 </style>
