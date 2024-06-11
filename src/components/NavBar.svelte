@@ -2,7 +2,6 @@
   import { page } from "$app/stores";
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
-
   const menuOpen = writable(false);
 
   function toggleMenu() {
@@ -23,6 +22,14 @@
       },
       { threshold: 0.1 }
     );
+
+    menuOpen.subscribe((value) => {
+      if (value) {
+        document.body.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+      }
+    });
 
     observer.observe(nav);
     menuOpen.set(false);
