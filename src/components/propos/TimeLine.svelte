@@ -64,9 +64,9 @@
 
   const ankama = {
     imgs: [
-      "/images/timeElements/iut.png",
+      "/images/timeElements/images_list-r4x3w1000-578e5237a5303-l-editeur-de-jeux-video-roubaisien-ankama-a-sorti-son.jpg",
       "/images/timeElements/images.jpg",
-      "/images/timeElements/classe.jpg",
+      "/images/timeElements/B9733276191Z.1_20230125144212_000+G6IM3IDNE.1-0.jpg",
     ],
     text: [
       "Une stage passionnant aucours duquel j'ai pu avoir une vision globale des métiers de l'industrie du jeu vidéo.",
@@ -76,9 +76,9 @@
 
   const pontus = {
     imgs: [
-      "/images/timeElements/iut.png",
-      "/images/timeElements/mmi.png",
-      "/images/timeElements/classe.jpg",
+      "/images/timeElements/capture-d-ecran-google-street-view-1473074145.jpg",
+      "/images/timeElements/5edf1c0b28b0e_pontus_de_tyard.jpg",
+      "/images/timeElements/1-1.jpg",
     ],
     text: [
       "Trois année de lycées fantistiques qui se sont conclues par l'obtention d'un diplome avec mention.",
