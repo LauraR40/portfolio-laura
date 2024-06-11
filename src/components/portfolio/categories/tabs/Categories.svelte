@@ -14,7 +14,9 @@
         goToCat(name);
       }}
     >
-      <div class="category"></div>
+      <div class="category">
+        <img src={projects[name].imgUrl} alt={name} />
+      </div>
       <span>{name}</span>
     </div>
   {/each}
@@ -47,6 +49,12 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+
+  .category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .category-wrapper span {
