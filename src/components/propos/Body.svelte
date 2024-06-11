@@ -18,8 +18,8 @@
   </div>
 
   <div class="imgs">
-    <img src={imgs[0]} alt="" class="small" />
-    <img src={imgs[1]} alt="" class="small" />
+    <img src={imgs[0]} alt="illustration de gauche" class="small" />
+    <img src={imgs[1]} alt="illustration de droite" class="small" />
   </div>
 </div>
 
