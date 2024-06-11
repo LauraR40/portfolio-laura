@@ -1,16 +1,15 @@
 <script>
   // You can replace these with actual dynamic data if needed
   let contactInfo = {
-    address: "1234 Street Name, City, Country",
-    email: "youremail@example.com",
-    phone: "+1234567890",
-    // Adresse du Dorcel Store de Rennes x) (c'est un exemple)
+    address: "Rue Édouard Branly, 22300 Lannion",
+    email: "laura.rocheteau@example.com",
+    phone: "+33 1 23 45 67 89",
     mapSrc:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.6668086479117!2d-1.6911777235452206!3d48.135948571243276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ede1ac2ac42d7%3A0x1b32de1df96dbbd3!2sDorcelstore%20Rennes!5e0!3m2!1sen!2sus!4v1717693552800!5m2!1sen!2sus",
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.234760090152!2d-3.451812!3d48.758313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48122c034b5275af%3A0x355e62516b08c22f!2sIUT%20de%20Lannion%20-%20Universit%C3%A9%20de%20Rennes!5e0!3m2!1sfr!2sfr!4v1718144638209!5m2!1sfr!2sfr",
   };
   function submitForm() {
     // Handle form submission
-    alert("Form submitted!");
+    alert("Formulaire soumis !");
   }
 </script>
 
@@ -156,5 +155,74 @@
   .contact-info a {
     color: var(--primary-color);
     text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    .contact-container {
+      flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-info {
+      margin: 1rem 0;
+    }
+
+    .contact-header h1 {
+      font-size: 2rem;
+    }
+
+    .contact-header p {
+      font-size: 1rem;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+      font-size: 1.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem;
+      padding: 0.4rem;
+    }
+
+    .contact-form button {
+      padding: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-info p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-header h1 {
+      font-size: 1.8rem;
+    }
+
+    .contact-header p {
+      font-size: 0.9rem;
+    }
+
+    .contact-form h2,
+    .contact-info h2 {
+      font-size: 1.3rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+    }
+
+    .contact-form button {
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    .contact-info p {
+      font-size: 0.8rem;
+    }
   }
 </style>
