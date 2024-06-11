@@ -56,12 +56,14 @@
   }
 
   .big {
+    height: 40% !important;
     display: grid;
     grid-column: 1 / span 2;
   }
 
   .small {
     display: grid;
-    grid: 1 / span 1;
+    /* grid: 1 / span 1; */
+    grid-row: 1;
   }
 </style>
