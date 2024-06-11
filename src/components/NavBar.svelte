@@ -1,6 +1,19 @@
 <script>
   import { page } from "$app/stores";
   import { onMount } from "svelte";
+  import { writable } from "svelte/store";
+
+  const menuOpen = writable(false);
+
+  function toggleMenu() {
+    menuOpen.update((value) => !value);
+  }
+
+  $: $page.url, closeMenu();
+
+  function closeMenu() {
+    menuOpen.set(false);
+  }
 
   onMount(() => {
     const nav = document.querySelector("nav");
@@ -12,6 +25,7 @@
     );
 
     observer.observe(nav);
+    menuOpen.set(false);
   });
 </script>
 
@@ -19,7 +33,12 @@
   <div class="logo">
     <a href="/"><img src="/logo.png" alt="Logo" /></a>
   </div>
-  <ul>
+  <button class="hamburger" on:click={toggleMenu}>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+  <ul class:open={$menuOpen}>
     <li>
       <a href="/" class:active={$page.url.pathname === "/"}>
         <img src="/icons/home.svg" alt="Accueil" />
@@ -73,12 +92,31 @@
     height: 40px; /* Adjust this as needed */
   }
 
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 24px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .hamburger .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 2px;
+  }
+
   ul {
     list-style: none;
     display: flex;
     gap: 2rem;
     margin: 0;
     padding: 0;
+    transition: all 0.3s;
   }
 
   li a {
@@ -106,5 +144,40 @@
     position: absolute;
     bottom: -5px;
     left: 0;
+  }
+
+  @media (max-width: 768px) {
+    .hamburger {
+      display: flex;
+    }
+
+    ul {
+      display: flex;
+      height: 0px;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 100%;
+      left: -1px;
+      width: 100vw;
+      background: rgba(25, 22, 40, 0.9);
+      transition: all 0.3s;
+    }
+
+    ul.open {
+      display: flex;
+      height: 100vh;
+    }
+
+    li {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    li a {
+      font-size: 1.5rem;
+    }
   }
 </style>
