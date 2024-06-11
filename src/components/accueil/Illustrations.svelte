@@ -46,6 +46,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <!-- svelte-ignore a11y-missing-attribute -->
+<!-- svelte-ignore a11y-missing-content -->
 
 <section class="illustrations">
   <h2>Mes illustrations</h2>
@@ -54,32 +55,25 @@
     contribuer à créer et améliorer de nouvelles choses.
   </p>
   <div class="carousel-container">
-    <a class="arrows prev" on:click={prev}>❮</a>
     <div class="carousel">
       <div class="carousel-inner">
         {#each illustrations as illustration, index}
-          <div
-            class="carousel-item"
-            class:prev={$current === (index + 2) % illustrations.length}
-            class:next={$current ===
-              (index - 2 + illustrations.length) % illustrations.length}
-            class:active={$current === index}
-            class:prev2={$current === (index + 1) % illustrations.length}
-            class:next2={$current ===
-              (index - 1 + illustrations.length) % illustrations.length}
-          >
+          <div class="carousel-item" class:active={$current === index}>
             <img src={illustration.src} alt={illustration.alt} />
           </div>
         {/each}
       </div>
     </div>
-    <a class="arrows next" on:click={next}>❯</a>
-  </div>
-  <div class="dots">
-    {#each illustrations as _, index}
-      <!-- svelte-ignore a11y-missing-content -->
-      <a class:active={$current === index} on:click={() => goTo(index)}></a>
-    {/each}
+    <div class="dots">
+      <a class="arrows prev" on:click={prev}>❮</a>
+      {#each illustrations as _, index}
+        <a
+          class="dot {$current === index ? 'active' : ''}"
+          on:click={() => goTo(index)}
+        ></a>
+      {/each}
+      <a class="arrows next" on:click={next}>❯</a>
+    </div>
   </div>
   <button class="see-more-button">Voir plus</button>
 </section>
@@ -94,7 +88,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
 
   .illustrations h2 {
@@ -116,8 +109,8 @@
     max-width: 900px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
 
   .carousel {
@@ -154,39 +147,24 @@
     transform: scale(1);
   }
 
-  .carousel-item.prev,
-  .carousel-item.next {
-    opacity: 0.7;
-  }
-
-  .carousel-item.prev2,
-  .carousel-item.next2 {
-    opacity: 0.5;
-  }
-
   .arrows {
     font-size: 2rem;
     cursor: pointer;
     color: var(--primary-color);
     z-index: 2;
-    position: absolute;
-  }
-
-  .arrows.prev {
-    left: -40px; /* Adjust position as needed */
-  }
-
-  .arrows.next {
-    right: -40px; /* Adjust position as needed */
+    position: relative;
+    margin: 0 0.5rem;
   }
 
   .dots {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
+    user-select: none;
   }
 
-  .dots a {
+  .dots a.dot {
     --size: 12px;
     width: var(--size);
     height: var(--size);
@@ -197,7 +175,7 @@
     opacity: 0.5;
   }
 
-  .dots .active {
+  .dots .dot.active {
     opacity: 1;
   }
 
@@ -232,5 +210,37 @@
 
   .see-more-button:hover::after {
     opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .carousel-item {
+      flex: 0 0 100%;
+    }
+
+    .carousel-item {
+      opacity: 1;
+      display: none;
+      animation: push 0.5s ease-in-out;
+    }
+
+    .carousel-item.active {
+      transform: scale(1) translate(0%);
+      display: block;
+    }
+
+    .dots .arrows {
+      display: block;
+      font-size: 1.5rem;
+      margin: 0 10px;
+    }
+  }
+
+  @keyframes push {
+    0% {
+      transform: scale(0.7);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 </style>
