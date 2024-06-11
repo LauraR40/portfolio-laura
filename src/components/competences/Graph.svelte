@@ -324,15 +324,6 @@
 
 <style>
   /* GENERAL */
-  h1 {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    font-family: var(--title-font);
-  }
   .flex {
     display: flex;
   }
@@ -380,11 +371,6 @@
     text-align: center;
     align-items: center;
   }
-
-  .p-2 {
-    padding: 0.5rem;
-  }
-
   .bas-graph {
     width: 100%;
     margin-top: 6rem;
@@ -475,15 +461,6 @@
     border-style: solid;
     --tw-border-opacity: 0.25;
     border-color: rgba(74, 85, 104, var(--tw-border-opacity));
-  }
-
-  .point-bas {
-    width: 15px;
-    height: 15px;
-    background-image: url(pts.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
   }
 
   .der-ligne {
