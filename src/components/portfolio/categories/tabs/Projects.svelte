@@ -13,7 +13,7 @@
   </div>
   <div class="wrapper-proj">
     {#each Object.values(projects) as projs}
-      {#each projs as proj}
+      {#each projs.projs as proj}
         <div>
           <img src={proj.imgUrl} alt={proj.id} />
           <span>{proj.id}</span>

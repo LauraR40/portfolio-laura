@@ -64,7 +64,7 @@
       <Categories {projects} {goToCat} />
     {:else if $tabIndex == 0}
       <Category
-        projects={projects[$currentCatego]}
+        projects={projects[$currentCatego].projs}
         currentCatego={$currentCatego}
       />
     {:else if $tabIndex == 1}
