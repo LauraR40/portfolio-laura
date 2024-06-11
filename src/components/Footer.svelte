@@ -1,7 +1,3 @@
-<script>
-  // Define any necessary script if required
-</script>
-
 <footer>
   <hr />
   <div class="footer-section">
@@ -48,6 +44,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     font-family: var(--default-font);
+    align-items: center;
   }
   .footer-bottom,
   .footer-section {
@@ -88,7 +85,6 @@
 
   .footer-bottom {
     text-align: center;
-    margin-top: 2rem;
     font-size: 0.875rem;
     padding-top: 1rem;
     width: 100%;
@@ -96,5 +92,13 @@
 
   .footer-bottom p {
     margin: 0.5rem 0;
+  }
+
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 </style>
