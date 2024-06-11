@@ -75,7 +75,7 @@
       <a class="arrows next" on:click={next}>❯</a>
     </div>
   </div>
-  <button class="see-more-button">Voir plus</button>
+  <a type="button" class="see-more-button" href="/portfolio">Voir plus</a>
 </section>
 
 <style>
@@ -193,6 +193,7 @@
     margin-top: 2rem;
     box-shadow: 0 0 4px 2px #ff00888d;
     position: relative;
+    text-decoration: none;
   }
 
   .see-more-button::after {
