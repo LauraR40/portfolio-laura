@@ -73,4 +73,34 @@
     width: 300px;
     border-radius: 8px;
   }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      padding: 0 5%;
+      height: auto;
+      text-align: center;
+    }
+
+    .row > div {
+      margin: 1rem 0;
+    }
+
+    .texte p {
+      font-size: 1rem;
+    }
+
+    .texte h1 {
+      font-size: 1.5rem;
+    }
+
+    .texte a {
+      font-size: 1rem;
+    }
+
+    .img img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
 </style>

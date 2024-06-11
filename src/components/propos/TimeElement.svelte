@@ -151,4 +151,18 @@
     align-items: center;
     justify-content: center;
   }
+
+  @media (max-width: 768px) {
+    .time-element.active {
+      height: 50vh;
+    }
+    .content {
+      display: block;
+    }
+
+    .body {
+      height: 75%;
+      overflow-y: scroll;
+    }
+  }
 </style>
