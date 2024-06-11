@@ -17,7 +17,7 @@
 
     <a
       on:click={() => {
-        downloadFile("cv.pdf");
+        downloadFile("CV_Laura_Rocheteau_web.pdf");
       }}>Jeter un coup d’œil à mon cv &rightarrow;</a
     >
   </div>
