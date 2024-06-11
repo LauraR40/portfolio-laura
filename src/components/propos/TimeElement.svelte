@@ -16,6 +16,7 @@
   <div class="indicator" on:click={goto(index)}>
     <div class="circle {active ? 'active' : ''}"></div>
     <div class="line"></div>
+    <div class="circle" style="margin-top: 100px; position: absolute;"></div>
   </div>
   <div class="content" on:click={goto(index)}>
     <h3>{title}</h3>
