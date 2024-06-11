@@ -1,3 +1,4 @@
+<h1>Mes compétences</h1>
 <div class="content-graph mx-auto">
   <div class="graph flex">
     <div class="componment">
@@ -319,18 +320,15 @@
 
 <style>
   /* GENERAL */
-
-  body {
-    padding: 0;
-    margin: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #191628;
-    font-family: "inherit", sans-serif;
+  h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: var(--title-font);
   }
-
   .flex {
     display: flex;
   }
@@ -345,7 +343,7 @@
   }
 
   .componment {
-    width: 41%;
+    width: 50%;
   }
 
   .sous-comp {
@@ -392,7 +390,7 @@
 
   .pts-rose-body {
     width: 15px;
-    padding: 0.5rem;
+    padding: 0.5rem 0.7rem;
     background-color: #191628;
   }
 
@@ -403,6 +401,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    transform: translateX(-50%);
   }
 
   .animate-pulse {
