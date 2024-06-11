@@ -7,12 +7,8 @@
   <div class="footer-section">
     <img src="/logo.png" alt="Company Logo" />
     <p>
-      LaurApplique S.A.S.U<br />
       LAURA ROCHETEAU<br />
       DEVELOPPEUSE D'APPLICATIONS FREELANCE<br />
-      123 rue du bonheur<br />
-      12300 SOLEIL<br />
-      PARADIS<br />
       &#9990; : +33 01 23 45 67 89<br />
     </p>
   </div>
@@ -34,6 +30,8 @@
     <h3>Réseaux</h3>
     <p><a href="https://linkedin.com">Linkedin</a></p>
     <p><a href="https://github.com">GitHub</a></p>
+    <p><a href="https://instagram.com">Instagram</a></p>
+    <p><a href="https://behance.com">Behance</a></p>
   </div>
   <hr />
   <div class="footer-bottom">
