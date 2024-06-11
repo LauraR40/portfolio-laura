@@ -55,6 +55,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .category img:hover {
+    transform: scale(0.8);
   }
 
   .category-wrapper span {
