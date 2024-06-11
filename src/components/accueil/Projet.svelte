@@ -151,4 +151,26 @@
     width: 35%;
     height: auto;
   }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .row > div {
+      width: 100%;
+    }
+
+    .projects-section {
+      height: auto;
+    }
+
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .blobs {
+      display: none;
+    }
+  }
 </style>
