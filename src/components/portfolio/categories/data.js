@@ -81,7 +81,7 @@ const projects = {
         imgUrl: "",
         date: "20 janvier 2024",
         desc: "gestion d'un projet de communication numérique.",
-        id: "Projet de communication numérique",
+        id: "Projet de communication numerique",
         type: "autre",
       },
       {
