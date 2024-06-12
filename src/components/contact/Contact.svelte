@@ -58,6 +58,7 @@
         style="border:0;"
         allowfullscreen=""
         loading="lazy"
+        title="Google Maps"
       ></iframe>
     </div>
   </div>
