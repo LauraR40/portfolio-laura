@@ -35,14 +35,19 @@
   }
 
   .wrapper-catego div {
-    height: 15vh;
-    background-color: #7f7f7f;
+    height: 10vh;
+    background-color: #e3336e;
     border-radius: 8px;
     margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    cursor: pointer;
+  }
+
+  .wrapper-catego div:hover {
+    background-color: #ee598b;
   }
 
   .wrapper-proj {
