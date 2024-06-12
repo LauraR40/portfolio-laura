@@ -60,7 +60,7 @@
   </div>
   <div class="row">
     <div class="mockup">
-      <img src="/images/mockup.png" alt="mockup" />
+      <img style="max-height: 35rem;" src="/images/mockup.png" alt="mockup" />
     </div>
     <div class="projets">
       <h2>Mes projets phare</h2>
