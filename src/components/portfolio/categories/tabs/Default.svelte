@@ -90,21 +90,24 @@
     gap: 1em;
     width: 100%;
     padding: 4rem 0;
-    background-color: #7f7f7f;
+    background-image: url("/images/timeElements/4da8ad22-e688-4d59-895f-dfce40fa4879.webp");
     color: var(--text-color);
     font-family: var(--title-font);
+    border-radius: 7px 7px 0 0;
   }
 
   .title h1 {
     font-family: var(--title-font);
     font-size: 2.5rem;
     color: var(--text-color);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
   }
 
   .title h2 {
     font-family: var(--default-font);
     font-size: 1.5rem;
     color: var(--primary-color);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
   }
 
   .tabs {
@@ -117,6 +120,7 @@
 
   .tabs-wrapper {
     background-color: whitesmoke;
+    border-radius: 0 0 7px 7px;
   }
 
   .tabs span {
