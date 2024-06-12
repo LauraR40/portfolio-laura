@@ -3,11 +3,14 @@
   import { writable } from "svelte/store";
 
   let illustrations = [
-    { src: "/images/illustrations/Illustration0.png", alt: "Illustration 0" },
-    { src: "/images/illustrations/Illustration1.png", alt: "Illustration 1" },
-    { src: "/images/illustrations/Illustration2.png", alt: "Illustration 2" },
-    { src: "/images/illustrations/Illustration3.png", alt: "Illustration 3" },
-    { src: "/images/illustrations/Illustration4.png", alt: "Illustration 4" },
+    {
+      src: "/images/illustrations/TD_ROCHETEAU_laura_B1.jpg",
+      alt: "isométrique",
+    },
+    { src: "/images/illustrations/blender.png", alt: "projet blender" },
+    { src: "/images/illustrations/yeux.png", alt: "autoportrait" },
+    { src: "/images/illustrations/hobur.PNG", alt: "logo luxe" },
+    { src: "/images/illustrations/poster.png", alt: "poster" },
   ];
 
   let current = writable(0);
