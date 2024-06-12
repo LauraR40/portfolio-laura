@@ -6,7 +6,7 @@ const projects = {
         imgUrl: "",
         date: "20 janvier 2024",
         desc: "Présentation d'une nouvelle formation en photonique. ",
-        id: "Vidéo ENSSAT",
+        id: "Video ENSSAT",
         type: "autre",
       },
       {
@@ -77,6 +77,13 @@ const projects = {
   Communication: {
     imgUrl: "/images/timeElements/meilleurs-outils-gestion-reseaux-sociaux.jpg",
     projs: [
+      {
+        imgUrl: "",
+        date: "20 janvier 2024",
+        desc: "gestion d'un projet de communication numérique.",
+        id: "Projet de communication numérique",
+        type: "autre",
+      },
       {
         imgUrl: "",
         date: "20 janvier 2024",
@@ -176,6 +183,13 @@ const projects = {
   "Développement Back": {
     imgUrl: "/images/timeElements/794962ec5b6392dee0ad3eba451c7f56.jpg",
     projs: [
+      {
+        imgUrl: "",
+        date: "20 janvier 2024",
+        desc: "SAE de création de base de donnée.",
+        id: "Site web BDD",
+        type: "autre",
+      },
       {
         imgUrl: "",
         date: "20 janvier 2024",
