@@ -21,11 +21,14 @@
   .proj {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+
     align-items: center;
     text-align: center;
 
     color: var(--bg-color);
     margin: 2em 0;
+
+    padding: 0 2rem;
   }
 
   .catego-projets {
@@ -40,5 +43,22 @@
   }
   .catego-projets hr {
     margin: 1em 0;
+  }
+
+  .proj img {
+    --size: clamp(10vh, 15vw, 15vh);
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    .catego-projets {
+      padding: 0;
+    }
+
+    .proj {
+      padding: 0;
+    }
   }
 </style>

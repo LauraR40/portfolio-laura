@@ -60,18 +60,20 @@
       >
     </div>
     <hr />
-    {#if $tabIndex === -1}
-      <Categories {projects} {goToCat} />
-    {:else if $tabIndex == 0}
-      <Category
-        projects={projects[$currentCatego].projs}
-        currentCatego={$currentCatego}
-      />
-    {:else if $tabIndex == 1}
-      <Projects {projectTypes} {projects} />
-    {:else if $tabIndex == 2}
-      <Venir />
-    {/if}
+    <div class="tabs-content">
+      {#if $tabIndex === -1}
+        <Categories {projects} {goToCat} />
+      {:else if $tabIndex == 0}
+        <Category
+          projects={projects[$currentCatego].projs}
+          currentCatego={$currentCatego}
+        />
+      {:else if $tabIndex == 1}
+        <Projects {projects} />
+      {:else if $tabIndex == 2}
+        <Venir />
+      {/if}
+    </div>
   </div>
 </section>
 
@@ -105,7 +107,7 @@
 
   .title h2 {
     font-family: var(--default-font);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--primary-color);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
   }
@@ -113,14 +115,25 @@
   .tabs {
     display: flex;
     justify-content: center;
+    align-items: center;
+
     gap: 2rem;
     padding: 1em 0;
     background-color: whitesmoke;
+    height: min-content;
   }
 
   .tabs-wrapper {
     background-color: whitesmoke;
     border-radius: 0 0 7px 7px;
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .tabs-content {
+    padding: 1rem;
+    height: 85%;
+    overflow-y: scroll;
   }
 
   .tabs span {
@@ -134,5 +147,16 @@
   .tabs span.active {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .tabs {
+      gap: 1rem;
+    }
+
+    .tabs span {
+      width: 100%;
+      text-align: center;
+    }
   }
 </style>

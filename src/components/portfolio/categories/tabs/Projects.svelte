@@ -1,20 +1,19 @@
 <script>
-  export let projectTypes;
   export let projects;
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="wrapper-explo">
-  <div class="wrapper-catego">
-    {#each projectTypes as proj}
-      <div>
-        {proj}
-      </div>
-    {/each}
-  </div>
   <div class="wrapper-proj">
     {#each Object.values(projects) as projs}
       {#each projs.projs as proj}
-        <div>
+        <div
+          class="project"
+          on:click={() => {
+            location.href = "/portfolio/" + proj.id;
+          }}
+        >
           <img src={proj.imgUrl} alt={proj.id} />
           <span>{proj.id}</span>
         </div>
@@ -24,34 +23,81 @@
 </div>
 
 <style>
-  .wrapper-catego {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: scroll;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    padding: 0 2rem;
-  }
-
-  .wrapper-catego div {
-    height: 10vh;
-    background-color: #e3336e;
-    border-radius: 8px;
-    margin: 2rem 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .wrapper-explo {
     padding: 2rem;
-    cursor: pointer;
-  }
-
-  .wrapper-catego div:hover {
-    background-color: #ee598b;
   }
 
   .wrapper-proj {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .wrapper-proj .project {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition:
+      transform 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
+
+    cursor: pointer;
+  }
+
+  .wrapper-proj .project img {
+    width: 100%;
+    height: 90%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .wrapper-proj .project span {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: var(--bg-color);
+  }
+
+  .wrapper-proj .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 1024px) {
+    .wrapper-proj {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .wrapper-proj {
+      grid-template-columns: 1fr;
+    }
+
+    .wrapper-proj .project {
+      padding: 0.5rem;
+    }
+
+    .wrapper-proj .project span {
+      font-size: 0.875rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .wrapper-explo {
+      padding: 1rem;
+    }
+
+    .wrapper-proj .project {
+      padding: 0.5rem;
+    }
+
+    .wrapper-proj .project span {
+      font-size: 0.75rem;
+    }
   }
 </style>
