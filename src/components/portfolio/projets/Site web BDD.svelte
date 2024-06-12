@@ -4,7 +4,7 @@
   <br />
   <img
     style="display: flex; align-items: center;"
-    src="/images/Capture.PNG"
+    src="/images/Capture2.PNG"
     alt="apports"
   />
   <br />
